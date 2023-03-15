@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Criterios e Alternativas</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../ESTILO/style.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="../JS/index.js"></script>
+
+
+
+    <div class="Div_Menu_Sup">
+
+
+
+        <div style="color: white;font-size: 2.1em;/* width: 66%; */text-shadow: 4px 0 black;" >
+
+            TOPSIS CALCULATOR
+
+
+        </div>
+
+        <!-- <button class="btn_HOME" onclick="home()">HOME</button>
+        <button class="btn_Sobre">SOBRE</button> -->
+
+        
+        <div class="nav"> 
+
+            <a href="../index.html" onclick="home()"> HOME</a>
+            <a href="../HTML/Sobre.html">SOBRE</a>
+            <a href=""  target="_blank" style="position: absolute;right: 5%;">TUTORIAL</a>
+
+        
+        </div>
+
+
+    </div>
+
+</head>
+
+<body onload="AddDecisores()">
+
+    <div class="Div_body">
+        <div class="Div_inp_cri_alt" >
+
+            <h1> Critérios</h1>
+
+            <form id="form_criterios" action="#">
+                <input type="text" class="input" required id="criterios0" name="criterio0"
+                    placeholder="Digite o Critério" wrap="hard">
+                
+
+            </form>
+            <button class="btn btn-success" id="add_criterios" onclick="adicionarInputCriterio()" style="margin-top: 10px;"> + Adicionar </button>
+            <button class="btn btn-danger" id="remove_criterios" onclick="tirarInputCriterio()" style="margin-top: 10px;" > - Remover </button>
+        </div>
+
+        <div class="Div_inp_cri_alt">
+
+            <h1>Alternativas</h1>
+
+            <form id="form_alternativas" action="#">
+                <input type="text" class="input" id="alternativas0" name="alternativa0" required
+                    placeholder="Digite a Alternativa">
+                
+
+            </form>
+            <button  class="btn btn-success" id="add_alternativas" onclick="adicionarInputAlternativas()" style="margin-top: 10px;"> + Adicionar</button>
+            <button  class="btn btn-danger id="remove_alternativas" onclick="tirarInputAlternativas()" style="margin-top: 10px;"> - Remover</button>
+
+        </div>
+
+
+        <div id="div_decisores" class="Div_inp_cri_alt">
+
+        </div>
+        
+        
+    </div>
+    
+    <div class="Div_botões">
+
+        <button class="btn btn btn-secondary btn_back" onclick="history.go(-1);">VOLTAR</button>
+        <button class="btn btn btn-secondary btn_next" type="submit" onclick="validate()">AVANÇAR</button>
+
+    </div>
+    
+
+    <footer>
+
+        <div class="rodape" >
+
+            <div style="color:white;font-size:12px;margin-top:18px;margin-bottom:10px;;width:70%;display: inline-block;">
+
+                
+                <h3> Todos os direitos reservados. O uso não comercial (acadêmico) deste software é gratuito.<br>
+                    Solicita-se a citação do software quando os resultados forem utilizados em publicações".<br>
+                    Para citar o software: ARAUJO, Jonathas Vinícius Gonzaga Alves; SANTOS, Marcos dos; GOMES, Carlos Francisco Simões.<br>
+                    TOPSIS CALCULATOR Software Web (v.1). 2021. </h3>
+            
+            </div>  
+            
+                
+            <img src="../IMG/Logo_IME.png" style="width:3%;margin:20px;margin-top:15px;margin-bottom:0px;float:right;">
+    
+            <img src="../IMG/Logo_IME.png" style="width:3%;margin:20px;margin-top:15px;margin-bottom:0px;float:left;">
+        
+
+        </div>
+    </footer>
+        
+
+    <script>
+
+        function validate() {
+
+        //     // let criterios = document.getElementById("criterios" + i)
+        //     arrayCRI = []
+        //     qtdC = window.localStorage.getItem("opt_metodo1" == "AHP")
+        //     console.log("alou")
+            
+        //     // console.log(items)
+        //     for (let i = 0; i < qtdC; i++) {
+        //         let criterios = document.getElementById("alternativas" + i)
+        //         if (criterios.value == "") {
+        //             alert("Item name alternativas required");
+        //             arrayCRI[i].focus(); // focuses on that particular input
+
+        //         }
+        //         else if (i = qtdC - 1) {
+        //             console.log(i)
+        //             console.log('funfou cri')
+        //             // if(window.localStorage.getItem('opt_metodo1') == "AHP")
+        //             // {
+        //             //     window.location.href = './prioridade.html'
+        //             // }
+        //         }
+        //     }
+
+
+        //     qtdA = window.localStorage.getItem("opt_metodo1" == "AHP")
+        //     arrayALT = []
+
+        //     for (let k = 0; k < qtdA; k++) {
+        //         let alternativas = document.getElementById("alternativas" + k)
+        //         if (alternativas.value == "") {
+        //             alert("Item name criterios required");
+        //             alternativas.focus(); // focuses on that particular input
+
+        //         }
+        //         else if (i = qtdA - 1) {
+        //             console.log(i)
+        //             console.log('funfou alt')
+        //             // if(window.localStorage.getItem('opt_metodo1') == "AHP")
+        //             // {
+        //             //     window.location.href = './prioridade.html'
+        //             // }
+        //         }
+
+
+                
+        //     }
+
+        // }
+
+        next = SalvarDADOS()
+
+        console.log(next)
+
+        if(next == false){
+            if(window.localStorage.getItem("opt_metodo1") == "AD"){
+                window.location.href = '../HTML/valoresCriterios.html'
+            }else{
+                window.location.href = '../HTML/Prioridade.html'
+
+
+            }
+        } 
+
+    }
+
+
+    </script>
+
+
+    
+</body>
+
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="../JS/index.js"></script>
+
+    <div class="Div_Menu_Sup">
+        <button class="btn_HOME" onclick="home()">HOME</button>
+        <button class="btn_Sobre">SOBRE</button>
+
+        
+        <div class="nav"> 
+
+            <a href="index.html" onclick="home()"> HOME</a>
+            <a href="Sobre.html">SOBRE</a>
+            <a href="pdf.pdf"  target="_blank" style="position: absolute;right: 5%;">TUTORIAL</a>
+
+        
+        </div>
+
+
+    </div>
+
+    <title>Tabela</title>
+</head>
+<body onload="testeTabela()">
+    <div id="div_tabela">
+
+        <table id="table" border="1" >
+            <thead id="table_h">
+            </thead>
+            <tbody  id="tbody">
+            </tbody>
+            <tfoot>
+            </tfoot>
+
+        </table>    
+
+    </div>
+
+    <button class="btn_next" > <a href="TabelaRanking.html">Ranking</a></button>
+</body>
+<footer>
+    <button type="submit" onclick="history.go(-1);">voltar</button>
+</footer>
+</html>

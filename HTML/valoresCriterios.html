@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../ESTILO/style.css" type="text/css">
+    <script src="../JS/index.js"></script>
+    
+
+    <div class="Div_Menu_Sup">
+
+
+
+        <div style="color: white;font-size: 2.1em;/* width: 66%; */text-shadow: 4px 0 black;" >
+
+            TOPSIS CALCULATOR
+
+
+        </div>
+
+        <!-- <button class="btn_HOME" onclick="home()">HOME</button>
+        <button class="btn_Sobre">SOBRE</button> -->
+
+        
+        <div class="nav"> 
+
+            <a href="../index.html" onclick="home()"> HOME</a>
+            <a href="../HTML/Sobre.html">SOBRE</a>
+            <a href=""  target="_blank" style="position: absolute;right: 5%;">TUTORIAL</a>
+
+        
+        </div>
+
+
+    </div>
+
+
+</head>
+<body onload="valoresCriterios()" onunload="gerarObjeto()">
+
+<div class="Div_body">
+
+    
+    <div id="div_CriAlt">
+        <h1 style="margin: 20px 0 20px 0;"> VALORES DOS CRITÉRIOS </h1>
+        
+
+    </div>
+
+  
+    
+</div>
+
+<div class="Div_botões">
+    
+    <button class="btn btn btn-secondary btn_next" onclick="GerarObjeto(),VerificaInput()">Proximo</button>
+    <button class="btn btn btn-secondary btn_back" onclick="history.go(-1);">VOLTAR</button>
+    
+</div>
+
+<!-- <button   onclick="VerificaInput()">teste</button> -->
+
+
+
+    
+<footer>
+
+    <div class="rodape" >
+
+        <div style="color:white;font-size:12px;margin-top:18px;margin-bottom:10px;;width:70%;display: inline-block;">
+
+            
+            <h3> Todos os direitos reservados. O uso não comercial (acadêmico) deste software é gratuito.<br>
+                Solicita-se a citação do software quando os resultados forem utilizados em publicações".<br>
+                Para citar o software: ARAUJO, Jonathas Vinícius Gonzaga Alves; SANTOS, Marcos dos; GOMES, Carlos Francisco Simões.<br>
+                TOPSIS CALCULATOR Software Web (v.1). 2021. </h3>
+        
+        </div>  
+        
+         
+        <img src="../IMG/Logo_IME.png" style="width:3%;margin:20px;margin-top:15px;margin-bottom:0px;float:right;">
+
+        <img src="../IMG/Logo_IME.png" style="width:3%;margin:20px;margin-top:15px;margin-bottom:0px;float:left;">
+
+ 
+
+    </div>
+
+
+
+
+
+    <script>
+
+    function VerificaInput(){
+
+
+
+        val_alternativas = document.querySelectorAll(".Valores_Alternativas")
+
+        
+        console.log(val_alternativas)
+        
+        
+        for (let i = 0; i < val_alternativas.length; i++) {
+            conf = true
+            
+            if(val_alternativas[i].value == ""){
+
+                
+                alert("Preencha todos os campos")
+                val_alternativas[i].focus
+                conf = false
+                break;
+                
+            }
+        }
+        if(conf == true){
+            GerarPeso()
+        }
+
+    }
+    //     $(document).ready(function() {
+    //     numero = document.getElementsByName("numero")
+
+    //      numero.on("keyup", function keyCode(event){
+    //          var x = event.keyCode;
+    //          if (x == 109 || x == 189) {
+    //              event.preventDefault();
+    //              alert ("You can't enter minus value !");
+    //          }
+    //      });
+    //    });
+
+
+
+
+
+    
+ </script>
+
+</footer>
+</body>
+
+
+</html>

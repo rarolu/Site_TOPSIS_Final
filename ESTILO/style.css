@@ -1,0 +1,448 @@
+/* input.inputinvalid {
+    background-color: #ffdddd;
+} */
+
+.nome_metodo{
+
+    font-size: x-large;
+}
+.btn_opçoes{
+    color: black;
+    background-color: #6c757d;
+    margin: 5px;
+
+}
+.btn_opçoes:hover{
+    background-color: cadetblue;
+
+}
+.btn_opçoes:disabled{
+    background-color: brown;
+
+}
+
+.Div_BG{
+    text-align: center;
+    width: 79%;
+    background: gainsboro;
+    padding-bottom: 50px;
+    border: 3px solid #000;
+    padding-top: 20px;
+    box-shadow: 10px 10px 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.rodape{
+
+    bottom:  0;
+    /* position: fixed; */
+    background-color: #6c757d;
+    /* background-image: url(menu2.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;   
+    z-index: 1;
+    text-align: center;
+    /* color: white; */
+    font-size: 12px;
+    margin-top: 18px;
+    /* margin-bottom: 10px; */
+    /* margin-left: 7%; */
+    float: left;
+    /* width: 70%; */
+
+    
+
+    text-align: center;
+    
+    
+}
+
+.rodape h3{
+    text-shadow: 2px 0 black;
+    font-size: 1.5rem; 
+}
+
+
+
+
+
+.btn_back{
+    display: flex;
+    width: 90px;
+    position: absolute;
+    /* margin-right: 50%; */
+    margin-top: 10px;
+    /* width: 90px; */
+    margin-left: 1%;
+    
+
+}
+
+.btn_next{
+
+    
+    display: flex;
+    width: 90px;
+    position: absolute;
+    margin-left: 90%;
+    margin-top: 10px;
+    right: 5%;
+
+}
+
+.img_pdf_image{
+
+cursor: pointer;
+width: 50px;
+margin-top: 4px;
+
+}
+
+
+.Div_img_pdf:hover{
+
+cursor: pointer;
+
+
+}
+
+.Div_img_pdf{
+
+width: 50px;
+margin-top: 4px;
+
+}
+
+
+
+.radio_metodo{
+    padding: 10px;
+}
+
+
+
+#table_PR{
+    width: 30px;
+}
+
+#table_ranking{
+    width: 30px;
+}
+
+#div_tabela_{
+    /* width: 50%; */
+}
+
+.align-center{
+
+    margin: 0 auto;
+    width: fit-content;
+
+
+}
+
+.input{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+input[type="radio"]{
+    vertical-align: baseline;
+}
+body{
+    /* align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; */
+    /* background-color: grey !important;  */
+    /* background-color: aliceblue !important; */
+    
+    /* background-color: rgba(0,0,0,0.9); */
+
+    /* background-repeat: no-repeat; */
+
+    /* background-repeat:no-repeat ; */
+    margin: 0;
+    /* background-size: cover; */
+    background-image: url(BG4.jpg);
+    /* background-size: cover; */
+    background-attachment: fixed;
+    /* background-repeat: no-repeat; */
+    
+    /* background-blend-mode: lighten; */ 
+    
+    
+}
+
+/* .Div_body::before {    
+    content: "";
+    background-image: url(BG.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.13;
+} */
+
+.h1-div{
+
+    text-align: center;
+    background-color:antiquewhite;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+.Div_Principal{
+    
+
+    background-color: white ;
+    margin: 30px;
+}
+
+.Div_Menu_Sup{
+    
+    
+    border-width: 2px;
+    /* margin-top: 5px; */
+
+    /* background-image: linear-gradient( to bottom , var(black), var(white)) */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    border-color: black;
+    background-image: linear-gradient(to bottom, #6c757d ,currentColor  );
+    background-color: #6c757d;
+    position: static;
+    backdrop-filter: blur(7px);
+    top: 3px;
+    width: 100%;
+    height: 100px;
+    min-height: 100px ;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 3;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    
+}
+
+.nav {
+
+    /* text-align: left; */
+    /* background-color: burlywood; */
+    /* float: left; */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* text-align: center; */
+    
+
+
+}
+
+.nav a{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    text-decoration: none ;
+    font-weight: bolder;
+    transition-duration: 0.7s;
+    
+}
+
+.nav a:hover{
+    background-color:gainsboro;
+    color: black;
+
+}
+
+.btn_HOME{
+
+    border: black;
+    border-style: double;
+    margin-left: 20px ;
+    float:left;
+    font-size:10px;
+    top: 10px;
+    
+    height: 50px;
+    background-color: papayawhip;
+
+
+}
+
+
+.btn_Sobre{
+
+    border: black;
+    border-style: double;
+    margin-right: 15px ;
+    float:right;
+    font-size:10px;
+    height: 50px;
+    background-color: papayawhip;
+
+}
+#div_CriAlt{
+    
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.Div_botões{
+
+    position: relative;
+    display: list-item;
+    padding-bottom: 10px;
+    height: 70px;
+    width: 100%;
+}
+
+.Div_inp_cri_alt{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-height: 100px;
+    /* background: rgba(108, 117, 125, 0.7); */
+    margin-top: 25px;
+    
+    padding-bottom: 15px;         
+    /* padding-bottom: 50px; */
+
+    padding-top: 50px;
+
+    text-align: center;
+    /* width: 79%; */
+    background: gainsboro;
+    border: 3px solid #000;
+    box-shadow: 10px 10px 10px;
+
+
+}
+
+.Div_botôes_mostrar{
+
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.Div_body{
+
+
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+    min-height: calc(100vh - 371px);
+    position: relative;
+
+    
+    
+
+   /* position: absolute;
+   top: 0;
+   left: 0; 
+   right: 0;
+   bottom: 0;
+   background: #fb1; */
+
+
+
+
+
+
+
+
+
+
+   /* height: 100vh; */
+    position: relative;
+    max-height: 100%;
+    width: 100%;
+    
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; 
+    
+
+
+
+
+    /* background-color: rgba(255, 255, 255, 0.9    ); */
+    
+
+
+
+   
+
+
+}
+
+#div_prioridade{
+
+    
+
+    min-height: calc(100vh - 301px);
+    position: relative;
+
+
+}
+
+
+
+#Div_analise_nome{
+
+    /* text-align: center; */
+}
+
+#Div_radio_metodo1{
+
+    display: flex; 
+
+    margin:  0px 50px; 
+
+
+}
+
+#Div_radio_metodo2{
+
+    display: flex;
+
+    margin:  0px 50px; 
+
+
+}
+
+.radio_metodo{
+
+    margin: 0 10px;
+
+}
+.Div_radio{
+
+    /* margin-right: 50%; */
+}
